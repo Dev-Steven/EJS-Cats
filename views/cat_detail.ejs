@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cat Detail</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <% for (var x in cats) { %>
+       <h1 class="d-flex justify-content-start title"> Details Page for <%= cats[x].name1 %></h1>
+       <a class="home_link" href="/cats"><h1>Home</h1></a>
+    </nav>
+    
+    <div class="dets">
+        <div class="d-flex justify-content-center">
+            <img src="<%= cats[x].img %>" alt="cat">
+            <div class="contents">
+                <h3 class="d-flex justify-content-center">Age: <%= cats[x].age1 %></h3>
+                <br>
+                <h3 class="d-flex justify-content-center">Food: <%= cats[x].food1 %></h3>
+                <br>
+                <h3 class="d-flex justify-content-center">Sleeping Spots:</h3>
+                <div class="d-flex justify-content-center">
+                    <ul>
+                        <li><%= cats[x].spot1 %></li>
+                        <li><%= cats[x].spot2 %></li>
+                    </ul>   
+                </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
